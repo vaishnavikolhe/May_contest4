@@ -122,10 +122,9 @@ allBtn.addEventListener("click", () => {
   section.forEach((element) => {
     element.innerHTML = "";
   })
-  var categoryArray = ["men's clothing", "women's clothing", "jewelery", "electronics"]
-  categoryArray.forEach((category) => {
-    displayData(rawData, category);
-  })
+  
+    displayData(rawData);
+  
   allBtn.className = "filter active";
   womenBtn.className = "filter";
   jewelBtn.className = "filter";
@@ -137,7 +136,11 @@ menBtn.addEventListener("click", () => {
   section.forEach((element) => {
     element.innerHTML = "";
   })
-  displayData(rawData, "men's clothing")
+  var filteredArray= rawData.filter((element)=>{
+    return element.category=="men's clothing"
+  })
+  
+  displayData(filteredArray)
   allBtn.className = "filter";
   womenBtn.className = "filter";
   jewelBtn.className = "filter";
@@ -149,7 +152,11 @@ womenBtn.addEventListener("click", () => {
   section.forEach((element) => {
     element.innerHTML = "";
   })
-  displayData(rawData, "women's clothing")
+  var filteredArray= rawData.filter((element)=>{
+    return element.category=="women's clothing"
+  })
+  
+  displayData(filteredArray)
   allBtn.className = "filter";
   womenBtn.className = "filter active";
   jewelBtn.className = "filter";
@@ -161,7 +168,11 @@ jewelBtn.addEventListener("click", () => {
   section.forEach((element) => {
     element.innerHTML = "";
   })
-  displayData(rawData, "jewelery")
+  var filteredArray= rawData.filter((element)=>{
+    return element.category=="jewelery"
+  })
+  
+  displayData(filteredArray)
   allBtn.className = "filter";
   womenBtn.className = "filter";
   jewelBtn.className = "filter active";
@@ -173,7 +184,11 @@ electBtn.addEventListener("click", () => {
   section.forEach((element) => {
     element.innerHTML = "";
   })
-  displayData(rawData, "electronics")
+  var filteredArray= rawData.filter((element)=>{
+    return element.category=="electronics"
+  })
+  
+  displayData(filteredArray)
   allBtn.className = "filter";
   womenBtn.className = "filter";
   jewelBtn.className = "filter";
