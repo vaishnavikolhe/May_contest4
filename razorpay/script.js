@@ -7,7 +7,7 @@
 
 let total = JSON.parse (localStorage.getItem('total'));
 var options = {
-  key: "rzp_test_xebQqoQDe7xN3N", // Enter the Key ID generated from the Dashboard
+  key: "rzp_test_asYloCOsGQdLDM", // Enter the Key ID generated from the Dashboard
   amount: total*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
   currency: "INR",
   name: "MeShop Checkout",
